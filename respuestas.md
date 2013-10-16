@@ -59,13 +59,13 @@ git@github.com:coromoto/PruebasUnitarias.git
 
    ```
     gcd.rb:1:def gcd(u, v)
-    (rdb:1) b 4				//una vez mas, establecesmos un breakpoint en la linea 4:  u, v = v, u % v
+    (rdb:1) b 4				//una vez mas, establecemos un breakpoint en la linea 4:  u, v = v, u % v
     Set breakpoint 1 at gcd.rb:4
     (rdb:1) n				//ejecutamos el programa
     gcd.rb:9: puts gcd(6,3)
     (rdb:1) n
     Breakpoint 1, gcd at gcd.rb:4
-    gcd.rb:4:    u, v = v, u % v	//esta vez es correcto: salta el breakpoint que habíamos establecido en la línea 4
+    gcd.rb:4: u, v = v, u % v		//esta vez es correcto: salta el breakpoint que habíamos establecido en la línea 4
    					//porque esta vez la condición del while es la correcta.
   ```
    **2.3.) Escriba la dirección 'HTTP' del repositorio que contiene el desarrollo de su práctica.**
