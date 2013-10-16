@@ -6,7 +6,9 @@ git@github.com:coromoto/PruebasUnitarias.git
 
 ####2) En esta tarea escriba la respuesta a las siguientes preguntas:
 
-   ######2.1.) ¿Cuál es el error en el código del método para calcular el máximo común divisor?
+   **2.1.) ¿Cuál es el error en el código del método para calcular el máximo común divisor?**
+
+   Partimos del código:
 ```
   def gcd(u, v)
     u, v = u.abs, v.abs
@@ -18,11 +20,11 @@ git@github.com:coromoto/PruebasUnitarias.git
 
   puts gcd(6,3)
 ```
-  Este código tiene un problema en la línea  "while v == 0". Para que funcione correctamente sería...
+  Este código tiene un problema. En la línea  "while v == 0". Para que funcione correctamente sería...
 ```
   def gcd(u, v)
     u, v = u.abs, v.abs
-    while v != 0
+    while v != 0		//antes...while v == 0
       u, v = v, u % v
     end
     u
@@ -32,7 +34,7 @@ git@github.com:coromoto/PruebasUnitarias.git
 ```
   Si dejamos la línea "while v == 0" no se ejecutaría correctamente, devolvería siempre el primer parámetro.
 
-   ######2.2.) ¿Qué comandos del depurador utilizó para detectarlo? Describa la sesión de depuración.
+   **2.2.) ¿Qué comandos del depurador utilizó para detectarlo? Describa la sesión de depuración.**
 
    Comandos utilizados:
    ```
@@ -66,6 +68,6 @@ git@github.com:coromoto/PruebasUnitarias.git
     gcd.rb:4:    u, v = v, u % v	//esta vez es correcto: salta el breakpoint que habíamos establecido en la línea 4
    					//porque esta vez la condición del while es la correcta.
   ```
-   ######2.3.) Escriba la dirección 'HTTP' del repositorio que contiene el desarrollo de su práctica.
+   **2.3.) Escriba la dirección 'HTTP' del repositorio que contiene el desarrollo de su práctica.**
  
    https://github.com/alu0100207385/pract05.git
