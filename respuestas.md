@@ -46,14 +46,15 @@ git@github.com:coromoto/PruebasUnitarias.git
    (rdb:1) n				//ejecutamos el código
     gcd.rb:9: puts gcd(6,3)		//ejecuta la funcion y muestra el contenido de la ultima linea de la funcion gcd
    (rdb:1) n
-    6					//solución erronea: mcd (6,3) = 3, sin embargo, el programa devuelve 6.
-    ```					//¿Qué ha pasado?
-					//Hemos puesto un breakpoint en la linea 4, sin embargo no ha llegado a ejecutarse porque
-					//no entra en el bucle while, por lo tanto la condición de entrada debe ser errónea.
+    6
+  ```
+  Solución errónea: mcd (6,3) = 3, sin embargo, el programa devuelve 6.
+  ¿Qué ha pasado?
+  Hemos puesto un breakpoint en la linea 4, sin embargo no ha llegado a ejecutarse porque no entra en el bucle while, por lo tanto la condición de entrada debe ser errónea.
 
 
     Antes de continuar con la depuración modificamos el archivo, concretamente la línea 3: while v == 0, sustituyéndola     por while v != 0 y volvemos a ejecutar el depurador.
-    ```
+   ```
     gcd.rb:1:def gcd(u, v)
     (rdb:1) b 4				//una vez mas, establecesmos un breakpoint en la linea 4:  u, v = v, u % v
     Set breakpoint 1 at gcd.rb:4
@@ -62,8 +63,8 @@ git@github.com:coromoto/PruebasUnitarias.git
     (rdb:1) n
     Breakpoint 1, gcd at gcd.rb:4
     gcd.rb:4:    u, v = v, u % v	//esta vez es correcto: salta el breakpoint que habíamos establecido en la línea 4
-    ```					//porque esta vez la condición del while es la correcta.
-   
+   					//porque esta vez la condición del while es la correcta.
+  ```
    #####2.3.) Escriba la dirección 'HTTP' del repositorio que contiene el desarrollo de su práctica.
-   
+ 
    https://github.com/alu0100207385/pract05.git
