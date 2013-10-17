@@ -10,4 +10,6 @@ Por ej. ruby racionales.rb 2 3 4 5
 Crea los racionales 2/3 y 4/5
 ```
 
+Para realizar las pruebas, ejecutar el programa **tc_racionales.rb**
+
 El archivo **respuestas.md** contiene las preguntas planteadas y sus respuestas.
