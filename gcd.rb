@@ -1,4 +1,4 @@
-def gcd(u,v)
+def gcd(u,v)	#gcd = MCD = max. común divisor
   u, v = u.abs, v.abs
   while (v != 0)
     u, v = v, u % v
@@ -6,7 +6,7 @@ def gcd(u,v)
   u
 end
 
-def mcm (a, b)
+def mcm (a, b)	#mcm = MCM = mín. común múltiplo
  (a*b)/gcd(a,b)
 end
 

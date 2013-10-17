@@ -34,7 +34,7 @@ class NumerosRacionales
     NumerosRacionales.new(num/simplifica,deno/simplifica)
   end
   
-  def *(other)					#multiplicacion: multiplicamos numerador con numerador y denominador con denominador
+  def *(other)		#multiplicacion: multiplicamos numerador con numerador y denominador con denominador
     num = @a*other.a
     deno = @b*other.b
     simplifica = gcd(num,deno)			#averiguamos el valor para obtener el racional irreducible
@@ -57,7 +57,7 @@ class NumerosRacionales
    end
 end
 
-if (not ARGV[0])
+if (not ARGV[0])	#Controlamos que el usuario introduzca correctamente los argumentos de entrada
   puts "Error de entrada. Escriba parametros de entrada de la forma: programa.rb [arg1 arg2 arg3 arg4]"
   puts "Ej) programa.rb 2 3 4 5"
   puts "Crea los racionales 2/3 y 4/5"
