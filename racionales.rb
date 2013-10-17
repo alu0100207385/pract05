@@ -4,7 +4,7 @@ class NumerosRacionales
   attr_reader :a, :b
   
   def initialize (a, b)
-    @a,@b = a,b
+    @a,@b = a,b    
   end
   
   def to_s
@@ -57,7 +57,7 @@ class NumerosRacionales
 end
 
 if (not ARGV[0])
-  puts "Error de entrada. Escriba parametros de entrada de la forma: programa.rb 4 5 6 7"
+  puts "Error de entrada. Escriba parametros de entrada de la forma: programa.rb [arg1 arg2 arg3 arg4]"
   puts "Ej) programa.rb 2 3 4 5"
   puts "Crea los racionales 2/3 y 4/5"
 else
