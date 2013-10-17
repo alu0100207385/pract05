@@ -4,7 +4,8 @@ class NumerosRacionales
   attr_reader :a, :b
   
   def initialize (a, b)
-    @a,@b = a,b    
+    raise ZeroDivisionError, "Denominador igual a cero" if (b==0)
+    @a,@b = a,b
   end
   
   def to_s
