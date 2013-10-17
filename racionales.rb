@@ -15,8 +15,6 @@ class NumerosRacionales
     deno = mcm(@b, other.b)			#MCM para allar el denominador
     num = ((deno/@b) * @a) + ((deno/other.b) * other.a)
     simplifica = gcd(num,deno)			#averiguamos el valor para obtener el racional irreducible
-#     num = num/simplifica
-#     deno = deno/simplifica
     if ((num < 0) and (deno < 0)) or ((num > 0) and (deno < 0)) #corregimos el signo
       num = num * (-1)
       deno = deno * (-1)
@@ -25,7 +23,7 @@ class NumerosRacionales
   end
 
   def -(other)					#para restar dos nums racionales...
-    deno = mcm(@b, other.b)			#MCM para allar el denominador
+    deno = mcm(@b, other.b)			#MCM para hallar el denominador
     num = ((deno/@b) * @a) - ((deno/other.b) * other.a)
     simplifica = gcd(num,deno)			#averiguamos el valor para obtener el racional irreducible
     if ((num < 0) and (deno < 0)) or ((num > 0) and (deno < 0)) #corregimos el signo
