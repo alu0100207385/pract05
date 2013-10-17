@@ -12,7 +12,7 @@ class NumerosRacionales
   end
   
   def +(other) 					#para sumar dos nums racionales...
-    deno = mcm(@b, other.b)			#MCM para allar el denominador
+    deno = mcm(@b, other.b)			#MCM para hallar el denominador
     num = ((deno/@b) * @a) + ((deno/other.b) * other.a)
     simplifica = gcd(num,deno)			#averiguamos el valor para obtener el racional irreducible
     if ((num < 0) and (deno < 0)) or ((num > 0) and (deno < 0)) #corregimos el signo
