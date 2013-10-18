@@ -9,7 +9,11 @@ class NumerosRacionales
   end
   
   def to_s
+    if (@a == 0) #numerador = 0, racional = 0. El denominador lo controlamos en el constructor
+      "0"
+    else
     "#{@a}/#{@b}"
+    end
   end
   
   def +(other) 					#para sumar dos nums racionales...
@@ -64,8 +68,8 @@ if (not ARGV[0])	#Controlamos que el usuario introduzca correctamente los argume
 else
   racional1 = NumerosRacionales.new(ARGV[0].to_i,ARGV[1].to_i)
   racional2 = NumerosRacionales.new(ARGV[2].to_i,ARGV[3].to_i)
-  puts racional1
-  puts racional2
+  puts "racional1 = #{racional1}"
+  puts "racional2 = #{racional2}"
   puts "Suma = #{racional1+racional2}"
   puts "Resta = #{racional1-racional2}"
   puts "Producto = #{racional1*racional2}"
